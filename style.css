@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4fc;
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  color: #333;
+}
+
+.game {
+  margin: 16px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  color: #667eea;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.scores strong {
+  color: #667eea;
+}
+
+/* 실제 해상도는 main.js에서 배율을 곱해 설정하고, 화면에는 400px로 표시 */
+canvas {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  background: #4ade80;
+  border-radius: 8px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.difficulty {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.difficulty select {
+  margin-left: 6px;
+  padding: 6px 10px;
+  font-size: 15px;
+  border: 1px solid #dcdff5;
+  border-radius: 8px;
+  background: #fff;
+}
+
+#pause-btn,
+#sound-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #667eea;
+  background: #fff;
+  border: 1px solid #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#pause-btn:hover,
+#sound-btn:hover {
+  background: #f3f4fc;
+}
+
+.message {
+  min-height: 24px;
+  margin: 12px 0 0;
+  font-weight: bold;
+  color: #e03e3e;
+}
+
+#start-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background: #5568d3;
+}
+
+/* 게임 진행 중에는 시작 버튼을, 게임 중이 아닐 때는 일시정지 버튼을 숨김 */
+.controls button.hidden {
+  display: none;
+}
